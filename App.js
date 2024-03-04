@@ -1,32 +1,23 @@
-import { View} from 'react-native';
-import ScrlView from './ScrollView';
-import Button from './Button';
-import PresableEx from './Pressable';
-import ModalEx from './Modal';
-import StatusbarEx from './StatusBar';
-import ActivityIndicatorEx from './ActivityIndicator';
+import { View, Text, StyleSheet, SafeAreaView, Platform} from 'react-native';
+import Greet from './Greet';
+import StyleSheetApiEx from './StyleSheetApi';
+import BoxModalEx from './BoxModal';
+import FlexboxEx from './Flexbox';
+import BoxEx from './RNLayout/Box';
+import DynamicModule from './DynamicUserInterface/DynamicModule';
+import SafeAreaViewEx from './DynamicUserInterface/SafeAreaView';
 
 export default function App(){
   return(
-    // <View>
-    //   <ActivityIndicatorEx size='small'/>
-    //   <ActivityIndicatorEx size='large'/>
-    //   <ActivityIndicatorEx size='large' animation={false}/>
-    // </View>
-    // <StatusbarEx/>
-    <View style={{flex: 1}}>
-      <View style={{backgroundColor: 'red', height: '50%'}}>
-      <ScrlView/>
-      </View>
-      <View style={{backgroundColor: 'green', height: '50%', paddingTop: 20}}>
-        
-        <Button title={'Click me one'}/>
-        <Button title={'click me two'}/>
-        <Button title={'click me three'}/>
-        <Button title={'click me four'}/>
-        <PresableEx/>
-        <ModalEx/>
-      </View>
-    </View>
+    <SafeAreaView style={styles.safeContainer}>
+      <SafeAreaViewEx/>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  safeContainer:{
+    flex: 1,
+    backgroundColor: Platform.OS === "android" ? "lightgrey" : "white",
+  }
+})
