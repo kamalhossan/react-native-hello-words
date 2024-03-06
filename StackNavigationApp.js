@@ -41,7 +41,7 @@ export default function App(){
         // }}
         >
             <Stack.Screen name="Home" component={HomeScreen} options={{
-              title: 'Home',
+              title: 'Welcome Home',
               // for specific page styles going to here
               headerStyle: {backgroundColor: '#6a51ae'},
               headerTintColor: '#fff',

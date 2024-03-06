@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, StatusBar, FlatList, ActivityIndicator, SafeArea
 // Json Placeholder api 
 // https://jsonplaceholder.typicode.com/
 
-export default function Networking(){
+export default function APICall(){
 
     const [postlist, setPostList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);

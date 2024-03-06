@@ -11,7 +11,5 @@
     "type": "Water",
     "data": ["Squirtle", "Wartortle", "Blastoise"]
   },
-  { "type": "Electric",
-    "data": ["Pikachu", "Raichu"]
-    }
+  { "type": "Electric", "data": ["Pikachu", "Raichu"] }
 ]
